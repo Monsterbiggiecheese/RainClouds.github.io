@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+        <meta charset="UTF-8">
+        <title>Diseño Web</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script>
+                function searchBooks() {
+                        var input, filter, ul, li, a, i, txtValue;
+                        input = document.getElementById("searchInput");
+                        filter = input.value.toUpperCase();
+                        ul = document.getElementById("bookList");
+                        li = ul.getElementsByTagName("a");
+
+                        for (i = 0; i < li.length; i++) {
+                                txtValue = li[i].textContent || li[i].innerText;
+                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                        li[i].parentNode.style.display = "";
+                                } else {
+                                        li[i].parentNode.style.display = "none";
+                                }
+                        }
+                }
+        </script>
+</head>
+
+<body>
+        <header>
+                <h1>Introduccion Guia de Libros</h1>
+        </header>
+
+        <main style="display: flex; justify-content: center; align-items: center; height: 30vh;">
+                <section style="text-align: center;">
+                        <h2 style="font-family: 'Arial Black', sans-serif; color: #2E86AB;">Libros de Nivel
+                                Pre-Universitario</h2>
+                        <p style="font-family: 'Comic Sans MS', sans-serif; color: #333;">"Este es el lugar indicado
+                                para el aprendizaje"</p>
+                        <p style="font-family: 'Arial Black', sans-serif; color: #e45555;">Indicaciones:</p>
+                        <p style="font-family: 'Palatino Linotype', sans-serif; color: #555;">Estos Libros Pre
+                                Universitarios son compartidos de manera virtual</p>
+                        <p style="font-family: 'Palatino Linotype', sans-serif; color: #555;">Podrás verlos con solo dar
+                                Click al Libro del Curso que desees estudiar!</p>
+                        <p style="font-family: 'Palatino Linotype', sans-serif; color: #555;">Cada libro cuenta con
+                                bastantes Páginas entre Teoría y Ejercicios Prácticos!</p>
+                </section>
+        </main>
+
+        <nav>
+                <input type="text" id="searchInput" onkeyup="searchBooks()" placeholder="Buscar libros">
+                <ul id="bookList">
+                        <li><a href="#" style="color: blue; font-family: Comic Sans MS;">Algebra</a></li>
+                        <li><a href="https://drive.google.com/file/d/1xmPzRraqnYnrnENVPMZSNQwTKr3p2eC7/view?usp=sharing"
+                                        download style="color: #020303; font-family: Impact;">Click Aqui para ver el
+                                        Libro de Baldor</a></li>
+                        <li><a href="https://drive.google.com/file/d/1KzDZnb11jZJU38ZiMULH6sZ2MXZfeyUo/view?usp=sharing"
+                                        download style="color: #020303; font-family: Impact;">Click Aqui para ver el
+                                        Libro de Esencial Lumbreras</a></li>
+                        <li><a href="https://drive.google.com/file/d/1SUpUOTrwtCMaq_TNbVm0dOBefPYWJ7TS/view?usp=sharing"
+                                        download style="color: #020303; font-family: Impact;">Click Aqui para ver el
+                                        Libro de Rodo</a></li>
+                        <li><a href="#" style="color: red; font-family: Comic Sans MS;">Trigonometria y Geometria</a>
+                        </li>
+                        <li><a href="https://drive.google.com/file/d/1DmN-gW5LBK0mHmA1mwhActg2PcWqzukE/view?usp=sharing"
+                                        download style="color: #020303; font-family: 'Impact';">Click Aqui para ver el
+                                        Libro Calapenshko</a></li>
+                        <li><a href="https://drive.google.com/file/d/1iNizFpGSYwtdEAcn4CSkUyCMsynbecME/view?usp=sharing"
+                                        download style="color: #020303; font-family: Impact;">Click Aqui para ver el
+                                        Libro de Compedio</a></li>
+                        <li><a href="https://drive.google.com/file/d/17xN8SQHUkriLsmhx1NRifH3nFKtien0U/view?usp=sharin"
+                                        download style="color: #020303; font-family: Impact;">Click Aqui para ver el
+                                        Libro de Carlos Iborra</a></li>
+                        <li><a href="#" style="color: #7c5307; font-family: 'Comic Sans MS';">Aritmetica</a></li>
+                        <li><a href="https://drive.google.com/file/d/1VeFv1iruc09tBsRkFO-GdluL1y0mCjGN/view?usp=sharing"
+                                        download style="color: #020303; font-family: Impact;">Click Aqui para ver el
+                                        Libro Rubiños</a></li>
+                        <li><a href="https://drive.google.com/file/d/1k1pSPq6TUjp9HPvAiaL3i67TIo1l-rwJ/view?usp=sharing"
+                                        download style="color: #020303; font-family: Impact;">Click Aqui para ver el
+                                        Libro de Lumbreras</a></li>
+                        <li><a href="https://drive.google.com/file/d/1VeFv1iruc09tBsRkFO-GdluL1y0mCjGN/view?usp=sharing"
+                                        download style="color: #020303; font-family: Impact;">Click Aqui para ver el
+                                        Libro de Esencial Lumbreras</a></li>
+                        <li><a href="#" style="color: darkblue; font-family: 'Comic Sans MS';">Fisica</a></li>
+                        <li><a href="https://drive.google.com/file/d/18mNF0lySkqCG6WbGPhKqjOzPaJ_s4mu8/view?usp=sharing"
+                                        download style="color: #020303; font-family: Impact;">Click Aqui para ver el
+                                        Libro 2 lumbreras</a></li>
+                        <li><a href="https://drive.google.com/file/d/1VeFv1iruc09tBsRkFO-GdluL1y0mCjGN/view?usp=sharing"
+                                        download style="color: #020303; font-family: Impact;">Click Aqui para ver el
+                                        Libro de Introduccion Fisica 1</a></li>
+                        <li><a href="#" style="color: #008080; font-family: 'Comic Sans MS';">Quimica</a></li>
+                        <li><a href="https://drive.google.com/file/d/1-mD-MYtvYun3wtDwvBAP1YfbHLbQpJ4w/view?usp=sharing"
+                                        download style="color: #020303; font-family: Impact;">Click Aqui para ver el
+                                        Libro Calapenshko</a></li>
+                        <li><a href="https://drive.google.com/file/d/12YaEye5k5iQtLpR6HjQg56ny7w_Eon5M/view?usp=sharing"
+                                        download style="color: #020303; font-family: Impact;">Click Aqui para ver el
+                                        Libro Rodo</a></li>
+                        <li><a href="#" style="color: #4B0082; font-family: 'Comic Sans MS';">Habilidad Matematica</a>
+                        </li>
+                        <li><a href="https://drive.google.com/file/d/1LyaRE_pWUXxnFQFx-d7RHek0AD1HTpNk/view?usp=sharing"
+                                        download style="color: #020303; font-family: 'Impact';">Click Aqui para ver el
+                                        Libro Rodo</a></li>
+                        <li><a href="https://drive.google.com/file/d/1isA18Rc8PijAUlbGnKjEw-VVxgvHXoYR/view?usp=sharing"
+                                        download style="color: #020303; font-family: Impact;">Click Aqui para ver el
+                                        Libro de Teoria y Practica</a></li>
+                </ul>
+        </nav>
+
+        <link rel="stylesheet" href="css/styles.css">
+        <footer>
+                <p>&copy; 2023 Proyecto Página Web. Todos los derechos reservados.</p>
+                <p>Proyecto de Robert Eloy, Roberto Cristhian y Michael Minaya</p>
+                <p>Muchas gracias por su visita. Esperamos que sea de su agrado.</p>
+        </footer>
+</body>
+
+</html>
